@@ -33,3 +33,4 @@
 /Users/hogar/IglesiaZoarApp/IglesiaZoarAPI/obj/Debug/net10.0/IglesiaZoarAPI.pdb
 /Users/hogar/IglesiaZoarApp/IglesiaZoarAPI/obj/Debug/net10.0/IglesiaZoarAPI.genruntimeconfig.cache
 /Users/hogar/IglesiaZoarApp/IglesiaZoarAPI/obj/Debug/net10.0/ref/IglesiaZoarAPI.dll
+/Users/hogar/IglesiaZoarApp/IglesiaZoarAPI/obj/Debug/net10.0/IglesiaZoarAPI.sourcelink.json

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IglesiaZoarAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9cbbafd092fe2d7909624a858a251a3ec9dd979")]
 [assembly: System.Reflection.AssemblyProductAttribute("IglesiaZoarAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IglesiaZoarAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
