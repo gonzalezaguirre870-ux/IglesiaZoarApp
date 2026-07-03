@@ -31,9 +31,10 @@ public class MiembrosController : ControllerBase
     {
         using var connection = new NpgsqlConnection(_connectionString);
         var sql = @"INSERT INTO miembros (nombre_completo, telefono, tipo_miembro, tiene_cargo, detalle_cargo, pertenece_femenil, pertenece_misioneritas, pertenece_varones, pertenece_exploradores, pertenece_embajadores) 
-                    VALUES (@NombreCompleto, @Telefono, @TipoMiembro::tipo_miembro_enum, @TieneCargo, @DetalleCargo, @PerteneceFemenil, @PerteneceMisioneritas, @PerteneceVarones, @PerteneceExploradores, @PerteneceEmbajadores);";
-        
+                VALUES (@NombreCompleto, @Telefono, @TipoMiembro::tipo_miembro_enum, @TieneCargo, @DetalleCargo, @PerteneceFemenil, @PerteneceMisioneritas, @PerteneceVarones, @PerteneceExploradores, @PerteneceEmbajadores);";
+
         await connection.ExecuteAsync(sql, miembro);
-        return Ok(new { mensaje = "Miembro registrado con éxito en Iglesia Zoar" });
+        return Ok(new { mensaje = "Miembro registrado con éxito" });
     }
+
 }

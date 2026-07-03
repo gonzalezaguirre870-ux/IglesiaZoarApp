@@ -3,10 +3,10 @@ var builder = WebApplication.CreateBuilder(args);
 // 1. Registrar controladores
 builder.Services.AddControllers();
 
-// 2. Configurar la regla CORS forzada para evitar bloqueos del navegador
+// 2. Configurar la regla CORS tal como lo propusiste
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("PermitirWeb", policy =>
+    options.AddPolicy("PermitirAcceso", policy =>
     {
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
@@ -16,18 +16,12 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// 3. OBLIGATORIO: El middleware de CORS debe ir exactamente aquí, antes de la redirección y mapeo
-app.UseCors("PermitirWeb");
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
+// 3. ESTRICTAMENTE EN ESTE ORDEN: Primero CORS, luego Autorización y Controladores
+app.UseCors("PermitirAcceso");
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
-// 4. Mapear las rutas de los controladores
 app.MapControllers();
 
 app.Run();
