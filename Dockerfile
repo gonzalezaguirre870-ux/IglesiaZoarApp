@@ -1,4 +1,4 @@
-# 1. Usar el entorno oficial de .NET para compilar
+ # 1. Usar el entorno oficial de .NET para compilar
 FROM ://microsoft.com AS build
 WORKDIR /src
 
