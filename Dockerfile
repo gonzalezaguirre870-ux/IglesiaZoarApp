@@ -1,13 +1,13 @@
 FROM ://microsoft.com AS build
 WORKDIR /src
-COPY ["IglesiaZoarAPI.csproj", "./"]
-RUN dotnet restore "IglesiaZoarAPI.csproj"
+COPY ["IglesiaZaorAPI.csproj", "./"]
+RUN dotnet restore "IglesiaZaorAPI.csproj"
 COPY . .
-RUN dotnet publish "IglesiaZoarAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish "IglesiaZaorAPI.csproj" -c Release -o /app/publish
 
-FROM ://microsoft.com AS final
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 ENV ASPNETCORE_URLS=http://+:10000
 EXPOSE 10000
-ENTRYPOINT ["dotnet", "IglesiaZoarAPI.dll"]
+ENTRYPOINT ["dotnet", "IglesiaZaorAPI.dll"]
